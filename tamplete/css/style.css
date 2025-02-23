@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('tamplete/font/MYRIADPRO-REGULAR.OTF') format('opentype');
+}
+:root{
+    --main-font: 'Helvetica, Arial, sans-serif';
+    --main-font-size: 18px;
+    --main-font-color: #ffffff;
+    --background:#fff;
+    --backgroundnav:#daac00;
+    --backbutton:#00bec9;
+    --boxshadow1:16px 17px 18px rgb(0, 0, 0 ,10%);
+    --backgroudsection:#fcc302;
+    --btn1:#00bec9;
+    --noir:#000000;
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    color: var(--main-font-color);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    
+}
+section{
+width: 100%;
+    height: 900px;
+    padding: 0pc;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+nav{
+    background-color: var(--backgroundnav);
+    height: 90px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    
+}
+nav .logo{
+    width: 30%;
+   
+}
+
+nav .logo img{
+    width: 318px;
+    height: 68px;
+  margin-left: 138px;
+}
+nav .menu{
+    width: 40%;
+    display: flex;
+  /*  justify-content: center;*/
+ 
+}
+nav .menu ul{
+    display: flex;
+   
+    list-style: none;
+  
+}
+nav .menu ul li{
+   margin-right: 30px;
+}
+nav .menu ul li a{
+   text-decoration: none;
+   color: var(--main-font-color);
+   font-size: 36px;
+ }
+/* 
+nav .search-container{
+    width: 30%;
+} */
+nav .search-container .search{
+    position: relative;
+    width:284px;
+    height:40px;
+    background-color: #fcc302;
+    border: none;
+    padding: 14px;
+    font-size: 20px;
+    box-shadow: var(--boxshadow1);
+}
+nav .search-container i{
+    position: absolute;
+    top: 25px;
+    /* right: 287px; */
+    height: 40px;
+   
+    width: 40px;
+    text-align: center;
+    background-color: var(--backbutton);
+    box-shadow: var(--boxshadow1);
+
+}
+.fa-search:before {
+    content: "\f002";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.section1,.section3,.section5,.section7,.section9{
+    background-color: var(--backgroudsection);
+}
+.section1 div ,.section2 div,.section3 div,.section4 div,.section5 div,.section6 div,.section7 div,.section8 div,.section9 div{
+    width: 50%;
+    padding: 116px;
+    
+ }
+ .section1 div h1, .section2 div h1 {
+    font-size: 82px;
+    text-align: left;
+    
+ } 
+ .section1 div p , .section2 div p{
+    font-size:32px;
+    text-align: left;
+    padding-bottom: 50px;
+    
+ }
+ .section1 div a, .section2 div a {
+   text-decoration: none;
+   margin: 12px;
+
+    
+ }
+ .section1 div .btn1 {
+ background-color:var(--btn1);
+ padding: 13px;
+ color: var(--main-font-color);
+ border-radius: 9px;
+ }
+ .section1 div .btn2, .section2 div .btn2 {
+    background-color: var(--backgroudsection);
+    padding: 13px;
+    border: 1px solid #fff;
+  color: var(--main-font-color);
+    border-radius: 9px;
+    }
+.section1 div img{
+   width: 70%;
+
+}
+.section2 div{
+   
+    position: relative;
+}
+.contat{
+    text-align: justify;
+
+}
+.section2 div p,.section2 div h1{
+  
+    color: var(--noir);
+}
+.section2 div h1{
+    font-size: 50px;
+}
+.video-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* صورة الغلاف */
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تأثير التراكب */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 204, 0, 0.5);
+    z-index: 1;
+}
+
+/* زر التشغيل */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.play-button::before {
+    content: "▶";
+    font-size: 24px;
+    color: #333;
+}
+
+/* الفيديو */
+.video {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
